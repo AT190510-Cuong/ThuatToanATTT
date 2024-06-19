@@ -10,8 +10,6 @@ t=math.ceil(m/w)
 
 
 
-
-
 A = [0]*t 
 B = [0]*t
 C = [0]*t
@@ -23,6 +21,7 @@ for i in range(t):
 print("Nhap vao mang B : ")
 for i in range(t):
     B[i] = int(input(f"Nhập vào phần tử B[{i}] : "))
+
 
 
 
@@ -46,8 +45,8 @@ def bieu_dien_mang(a):
 
 # A=bieu_dien_mang(a)
 # B=bieu_dien_mang(b)
-A.reverse()
-B.reverse()
+# A.reverse()
+# B.reverse()
 
 def cong(A,B): 
     C=[0]*t  

@@ -27,13 +27,22 @@ def divisor(n):
 
 
 if __name__ == '__main__':
-    n = int(input('Nhập số n = '))
+    # n = int(input('Nhập số n = '))
+    while True:
+        n = int(input('Nhập số n = '))
+        if n > 0:
+            break
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     d = divisor(n)
     count_prime = 0
     for i in range(0, len(d)):
         if d[i] % 2 != 0 or d[i] == 2:
             if check_snt(d[i]):
                 count_prime += 1
-    print(d)
-    print(f'Số ước = {len(d)}')
-    print(f'Số ước nguyên tố = {count_prime}')
+    if n == 1:
+        print(f"Số ước của {n} là 1 và không có ước nguyên tố")
+    else:
+        print(d)
+        print(f'Số ước = {len(d)}')
+        print(f'Số ước nguyên tố = {count_prime}')

@@ -39,7 +39,13 @@ def find_prime_sum(N):
 
 # Hàm chính để in kết quả
 if __name__ == '__main__':
-    N = int(input("Nhập số N: "))
+    # N = int(input("Nhập số N: "))
+    while True: 
+        N = int(input("Nhập số N: "))
+        if 1 <= N <= 10000:
+            break
+        else:
+            print("Nhập số nguyên dương N trong khoảng từ 1 đến 10000.")
     result = find_prime_sum(N)
     if result:
         M, combination = result

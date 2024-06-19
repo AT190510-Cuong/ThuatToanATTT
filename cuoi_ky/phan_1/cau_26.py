@@ -25,5 +25,11 @@ def number_strong(number_n):
 
 
 if __name__ == '__main__':
-    number_n = int(input('Nhập n = '))
+    # number_n = int(input('Nhập n = '))
+    while True:
+        number_n = int(input('Nhập n = '))
+        if 0 < number_n < 10000:
+            break
+        else:
+            print('Nhập số nguyên dương nhỏ hơn 10000!')
     number_strong(number_n)

@@ -59,7 +59,7 @@ def gcd(a, b):
 def result(a, b):
     list_result = []
     for i in range(a + 1, b):
-        for j in range(a + 1, b):
+        for j in range(i + 1, b):
             r = gcd(i, j)
             if r % 2 != 0 or r == 2:
                 if miller_rabin(r, r):
@@ -69,9 +69,16 @@ def result(a, b):
 
 if __name__ == '__main__':
 
-    a = int(input('Nhập số a = '))
-    b = int(input(f'Nhập số b > {a} = '))
-    if a <= b:
+    # a = int(input('Nhập số a = '))
+    # b = int(input(f'Nhập số b > {a} = '))
+    while True:
+        a = int(input('Nhập số a = '))
+        b = int(input(f'Nhập số b > {a} = '))
+        if a < 1000 and b < 1000 and a > 0 and b > 0:
+            break
+        else:
+            print('Nhập số nguyên dương < 1000')
+    if 0 < a <= b:
         print(result(a, b))
     else:
         print('a b không hợp lệ !')

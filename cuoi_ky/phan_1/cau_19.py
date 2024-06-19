@@ -19,19 +19,34 @@ def check_snt(n):
 def expression_prime(number_a, number_b,number_c, m, l):
     result = []
     for x in range(m, l + 1):
-        value = number_a * x * x + number_b * x \
-                + number_c
+        value = number_a * x * x + number_b * x + number_c
         if check_snt(value):
             result.append(x)
     return result
 
 
-number_m = int(input('Nhập số m = '))
-number_l = int(input(f'Nhập số l > ' f'{number_m} = '))
+# number_m = int(input('Nhập số m = '))
+# number_l = int(input(f'Nhập số l > ' f'{number_m} = '))
+while True:
+    number_m = int(input('Nhập số m = '))
+    number_l = int(input(f'Nhập số l > ' f'{number_m} = '))
+    if number_l > number_m > 0:
+        break
+    else:
+        print("Nhập l > m!")
 if number_l > number_m:
-    number_a = int(input('Nhập số a = '))
-    number_b = int(input('Nhập số b = '))
-    number_c = int(input('Nhập số c = '))
+    # number_a = int(input('Nhập số a = '))
+    # number_b = int(input('Nhập số b = '))
+    # number_c = int(input('Nhập số c = '))
+    while True:
+        number_a = int(input('Nhập số a = '))
+        number_b = int(input('Nhập số b = '))
+        number_c = int(input('Nhập số c = '))
+
+        if number_a > 0 and number_b > 0 and number_c > 0:
+            break  # If the input is valid and greater than 0, break out of the loop
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     result = expression_prime(number_a, number_b,number_c, number_m, number_l)
     if len(result) > 0:
         print(result)

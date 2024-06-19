@@ -23,7 +23,7 @@ def check_snt(n):
         return True
 
 
-def divisor_prime(d):
+def divisor_prime(d): # tìm các ước nguyên tố
     p = []
     for i in d:
         if i %2 != 0 or i == 2:
@@ -46,7 +46,7 @@ def sum_divisor(d):
     return s
 
 
-def divisor(n):
+def divisor(n): # tìm các ước
     d = [1, n]
     for i in range(2, int(math.sqrt(n) + 1)):
         if n / i == i:
@@ -59,7 +59,13 @@ def divisor(n):
 
 
 if __name__ == '__main__':
-    n = int(input("nhap so n:"))
+    # n = int(input("nhap so n:"))
+    while True:
+        n = int(input("nhập sô n: "))
+        if n >= 2:
+            break 
+        else:
+            print("Nhập số nguyên dương lớn hơn 2!")
     d = divisor(n)
     num_prime = divisor_prime(d)
     k = len(num_prime)  # so uoc nt

@@ -23,10 +23,16 @@ def result(m, n, d):
 
 if __name__ == '__main__':
     m = int(input('Nhập số m > 0 = '))
-    if m > 0:
+    if 1000 > m > 0:
         n = int(input(f'Nhập số n > {m} = '))
-        if n > m:
-            d = int(input('Nhập số d = '))
+        if 1000 > n > m:
+            # d = int(input('Nhập số d = '))
+            while True:
+                d = int(input('Nhập số d = '))
+                if 1000 > d > 0:
+                    break
+                else:
+                    print("Nhập số nguyên dương lớn hơn 0!")
             if d <= n:
                 output = result(m, n, d)
                 print(output)

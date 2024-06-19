@@ -7,7 +7,7 @@ hơn N (với N nhập vào từ bàn phím). đã tối ưu
 import math
 
 
-def divisor(a, b):
+def divisor(a, b): # tính tổng các ước
     s = 1
     for i in range(2, int(math.sqrt(a) + 1)):
         if a / i == i:
@@ -29,5 +29,11 @@ def show_result(n):
 
 
 if __name__ == '__main__':
-    n = int(input('nhập n = '))
+    # n = int(input('nhập n = '))
+    while True:
+        n = int(input('nhập n = '))
+        if n > 0:
+            break
+        else:
+            print('Nhập số nguyên dương lớn hơn 0!')
     print(show_result(n))

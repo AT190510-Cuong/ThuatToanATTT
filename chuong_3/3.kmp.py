@@ -40,4 +40,4 @@ def kmp(P,T):
     return('P NOT IN T')
 
 print(kmp(P,T))    
-# print(failure_function(P))    
+print(failure_function(P))    

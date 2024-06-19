@@ -32,5 +32,5 @@ def sang_PD(n):
         for i in range(2,n+1):
             if l[i]==True:
                 print(i,end=' ')  
-                 
+                
 sang_PD(n)                

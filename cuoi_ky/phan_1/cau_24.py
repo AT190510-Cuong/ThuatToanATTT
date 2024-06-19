@@ -20,8 +20,15 @@ def check_snt(n):
 
 
 if __name__ == '__main__':
-    a = int(input('Nhập số a = '))
-    b = int(input(f'Nhập số b >='))
+    # a = int(input('Nhập số a = '))
+    # b = int(input(f'Nhập số b >='))
+    while True:
+        a = int(input('Nhập số a = '))
+        b = int(input(f'Nhập số b >= {a} = '))
+        if b >= a > 0:
+            break
+        else:
+            print("Nhập số b lớn hơn hoặc bằng số a > 0!")
     l = []
     if b >= a:
         q = int(math.sqrt(b))

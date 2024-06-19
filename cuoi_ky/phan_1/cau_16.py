@@ -26,7 +26,13 @@ def random_array(n):
 
 
 if __name__ == '__main__':
-    n = int(input('Nhập kích thước mảng = '))
+    # n = int(input('Nhập kích thước mảng = '))
+    while True:
+        n = int(input('Nhập kích thước mảng = '))
+        if n > 0:
+            break
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     a = random_array(n)
     print(a)
     r = []

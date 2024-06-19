@@ -16,7 +16,13 @@ def check_snt(n):
 
 
 if __name__ == '__main__':
-    n = int(input())
+    # n = int(input())
+    while True:
+        n = int(input('Nhập n = '))
+        if n > 2:
+            break
+        else:
+            print("Nhập số nguyên dương lớn hơn 2!")
     r = []
     for i in range(2, n + 1):
         for j in range(i + 1, n + 1):

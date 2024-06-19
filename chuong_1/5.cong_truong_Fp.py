@@ -1,10 +1,11 @@
 import math
 
 p=int(input('nhap p :'))
+w=int(input('nhap w :'))
 a=int(input('nhap a :'))
 b=int(input('nhap b :'))
 
-w=8
+# w=8
 m=round(math.log2(p),0)
 t=math.ceil(m/w)
 def bieu_dien_mang(a):
@@ -60,12 +61,13 @@ def cong_Fp(A,B):
             e=1
     C.reverse()
     print('cong chinh xac boi (e,C=A+B):({},{})'.format(e,C))
-    if e==0:
-        print('cong tren Fp :C =',tinh(C))
+    if e == 0:
+        # print('cong tren Fp :C =',tinh(C))
+        print('cong tren Fp :C =',C)
         return e,C 
     else:
         gtri_c=tinh(C)
-        if gtri_c>=p :
+        if gtri_c >= p :
             gtri_c-=p 
             print('cong tren Fp :C =',tinh(C))
             return e,bieu_dien_mang(gtri_c)  

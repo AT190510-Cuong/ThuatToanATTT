@@ -24,7 +24,13 @@ def twin_number(number_n):  # hiển thị kếtquar
 
 
 if __name__ == '__main__':
-    n = int(input('Nhập n = '))
+    # n = int(input('Nhập n = '))
+    while True:
+        n = int(input('Nhập n = '))
+        if n > 2:
+            break
+        else:
+            print("Nhập số nguyên dương lớn hơn 2!")
     r = twin_number(n)
     if len(r) > 0:
         print(r)

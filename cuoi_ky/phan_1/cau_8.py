@@ -19,7 +19,13 @@ def number_t_prime(n):
 
 
 if __name__ == '__main__':
-    n = int(input('Nhập n = '))
+    # n = int(input('Nhập n = '))
+    while True:
+        n = int(input('Nhập n = '))
+        if n > 0:
+            break
+        else:
+            print('Nhập số nguyên dương lớn hơn 0!')
     for i in range(1, n + 1):
         if number_t_prime(i):
             print(i, end=" ")

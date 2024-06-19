@@ -17,7 +17,13 @@ def q_prime(n):
 
 
 if __name__ == '__main__':
-    number_n = int(input("Nhập số N: "))
+    # number_n = int(input("Nhập số N: "))
+    while True:
+        number_n = int(input("Nhập số N: "))
+        if number_n > 0:
+            break  # If the input is valid and greater than 0, break out of the loop
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     result = []
     for i in range(1, number_n + 1):
         if q_prime(i):

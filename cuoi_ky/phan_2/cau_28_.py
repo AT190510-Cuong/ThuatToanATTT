@@ -61,5 +61,12 @@ def number_carmichael(number_n):
                 print(i, end=" ")
 
 
-number_n = int(input("nhập số N ="))
+# number_n = int(input("nhập số N ="))
+while True:
+    number_n = int(input("nhập số N ="))
+    if 0 <= number_n <= 10000:
+        break
+    else:
+        print("Nhập số N trong khoảng từ 0 đến 10000")
 number_carmichael(number_n)
+

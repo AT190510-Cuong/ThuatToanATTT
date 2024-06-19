@@ -15,8 +15,15 @@ def check_snt(n):
 
 
 if __name__ == '__main__':
-    a = int(input("nhap a: "))
-    b = int(input("nhap b: "))
+    # a = int(input("nhap a: "))
+    # b = int(input("nhap b: "))
+    while True:
+        a = int(input("nhap a: "))
+        b = int(input("nhap b: "))
+        if 0 < a < b:
+            break
+        else:
+            print("Nhập 0 < a < b!")
     s = 0
     for i in range(a, b + 1):
         if i % 2 != 0 or i == 2:

@@ -25,10 +25,20 @@ def expression(number_n, number_a,number_b, number_c):
 
 
 if __name__ == '__main__':
-    number_n = int(input('Nhập n = '))
-    number_a = int(input('Nhập a = '))
-    number_b = int(input('Nhập b = '))
-    number_c = int(input('Nhập c = '))
+    # number_n = int(input('Nhập n = '))
+    # number_a = int(input('Nhập a = '))
+    # number_b = int(input('Nhập b = '))
+    # number_c = int(input('Nhập c = '))
+    while True:
+        number_n = int(input('Nhập n = '))
+        number_a = int(input('Nhập a = '))
+        number_b = int(input('Nhập b = '))
+        number_c = int(input('Nhập c = '))
+
+        if number_n > 0 and number_a > 0 and number_b > 0 and number_c > 0:
+            break  # If the input is valid and greater than 0, break out of the loop
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     r = expression(number_n, number_a,number_b, number_c)
     if r != None:
         print(f'S = {r[0]}')

@@ -24,8 +24,15 @@ def sum(number_a, number_b):
 
 
 if __name__ == '__main__':
-    number_a = int(input('Nhập số a = '))
-    number_b = int(input('Nhập số b = '))
+    # number_a = int(input('Nhập số a = '))
+    # number_b = int(input('Nhập số b = '))
+    while True:
+        number_a = int(input('Nhập số a = '))
+        number_b = int(input('Nhập số b = '))
+        if 0 < number_a < number_b:
+            break
+        else:
+            print("Nhập 0 < a < b!")
     s = sum(number_a, number_b)
     if check_snt(s):
         print('YES')

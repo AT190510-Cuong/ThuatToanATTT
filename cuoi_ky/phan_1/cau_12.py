@@ -31,7 +31,13 @@ def list_number_prime(n):
 
 
 if __name__ == '__main__':
-    number_n = int(input("Nhập n = "))
+    # number_n = int(input("Nhập n = "))
+    while True:
+        number_n = int(input('Nhập n = '))
+        if number_n > 2:
+            break
+        else:
+            print("Nhập số nguyên dương lớn hơn 2!")
     if number_n < 17:
         print("NO")
     else:

@@ -15,7 +15,13 @@ def check_snt(n):
     
 
 if __name__ == '__main__':
-    number_n = int(input("nhập sô n: "))
+    # number_n = int(input("nhập sô n: "))
+    while True:
+        number_n = int(input("nhập sô n: "))
+        if number_n > 0:
+            break  # If the input is valid and greater than 0, break out of the loop
+        else:
+            print("Nhập số nguyên dương lớn hơn 0!")
     if number_n >= 2 and number_n <= 10:
         for i in range(int(10 ** (number_n - 1)), 10 ** number_n):
             if i % 2 != 0 or i == 2:

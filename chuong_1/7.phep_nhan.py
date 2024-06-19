@@ -1,10 +1,11 @@
 import math
 
 p=int(input('nhap p :'))
+w=int(input('nhap w :'))
 a=int(input('nhap a :'))
 b=int(input('nhap b :'))
 
-w=8
+# w=8
 m=round(math.log2(p),0)
 t=int(round((m/w),0))
 def bieu_dien_mang(a):
