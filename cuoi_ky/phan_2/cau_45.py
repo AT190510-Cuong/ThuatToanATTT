@@ -67,7 +67,13 @@ def find_min(A):
 
 
 A = []
-n = int(input('Nhập số luợng n = '))
+# n = int(input('Nhập số luợng n = '))
+while True:
+    n = int(input('Nhập số luợng n = '))
+    if n > 0 :
+        break
+    else:
+        print("Nhập lại số N")
 t = 100  # mặc định tham số an toàn t = 100
 for i in range(n):
     num = random_number_prime(t)

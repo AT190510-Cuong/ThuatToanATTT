@@ -57,11 +57,17 @@ def check(i):
 
 
 def number_carmichael(number_n):
-    for i in range(31, number_n + 1, 2):
+    for i in range(31, number_n + 1, 2): 
         if is_prime(i) == False:
             if check(i):
                 print(i, end=" ")
 
 
-number_n = int(input("nhập số N ="))
+# number_n = int(input("nhập số N ="))
+while True:
+    number_n = int(input("nhập số N ="))
+    if number_n >= 0 and number_n <= 10000:
+        break
+    else:
+        print("Nhập lại số N")
 number_carmichael(number_n)

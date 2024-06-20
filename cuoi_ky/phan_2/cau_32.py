@@ -57,7 +57,7 @@ def miller_rabin(n, t):  # dùng miller để xét nguyên tố
 
 def random_number_q():  # random 2-500 khi nào dduwjojc snt ngừng
     while True:
-        q = random.randint(2, 500)  # 2 > q > 500
+        q = random.randint(100, 500)  
         if q % 2 != 0 or q == 2:
             if (miller_rabin(q, q)):
                 return q
@@ -86,7 +86,7 @@ def random_number_e(phi_n):
             if gcd(e, phi_n) == 1:
                 return e
 
-def calculator_d(a,b):
+def calculator_d(a,b): # ecuclid mở rộng
     if b==0:
         d=a;x=1;y=0
     else:
@@ -116,7 +116,13 @@ if __name__ == '__main__':
     phi_n = (p - 1) * (q - 1)
     e = random_number_e(phi_n)
     d = calculator_d(e, phi_n)
-    sbd = int(input("Nhập SBD = "))
+    # sbd = int(input("Nhập SBD = "))
+    while True:
+        sbd = int(input("Nhập SBD = "))
+        if sbd > 2:
+            break
+        else:
+            print("Nhập lại SBD")
     m = sbd + 123
     print(f'm = {m}')
     enc = square_integer(m, e, n)  # bản mã

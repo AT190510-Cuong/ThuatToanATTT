@@ -59,7 +59,12 @@ def gcd(a, b):
 
 
 if __name__ == '__main__':
+    print("nhập mảng A: ")
     A = [int(x) for x in input().split()]
+    for i in A:
+        if i < 0:
+            print('Mảng không hợp lệ')
+            exit()
     for i in range(0, len(A)):
         for j in range(i + 1, len(A)):
             r = gcd(A[i], A[j])

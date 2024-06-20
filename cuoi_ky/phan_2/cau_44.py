@@ -29,7 +29,14 @@ def gcd(a,b):
     return a
 
 p = int(input('P = '))
+# A = [int(x) for x in input().split()]
+print("nhập mảng A: ")
 A = [int(x) for x in input().split()]
+    
+for i in A: 
+    if i < 0:
+        print('Mảng không hợp lệ')
+        exit()
 B = [0 for x in range(len(A))]
 
 for i in range(0, len(A)):

@@ -50,9 +50,18 @@ def miller_rabin(n, t):  # dùng miller để xét nguyên tố
 
 
 if __name__ == '__main__':
-    number_a = int(input('Nhập số a > 0 = '))
-    number_k = int(input('Nhập k = '))
-    number_n = int(input(f'Nhập n > {number_k} = '))
+    # number_a = int(input('Nhập số a > 0 = '))
+    # number_k = int(input('Nhập k = '))
+    # number_n = int(input(f'Nhập n > {number_k} = '))
+    while True:
+        number_a = int(input('Nhập số a > 0 = '))
+        number_k = int(input('Nhập k = '))
+        number_n = int(input(f'Nhập n > {number_k} = '))
+        if number_a > 0 and number_k > 0 and number_n > number_k:
+            break
+        else:
+            print("nhập lại")
+
     b = square_integer(number_a, number_k, number_n)
     if miller_rabin(b,b) and b % 2 != 0 or b == 2:
         print('YES')

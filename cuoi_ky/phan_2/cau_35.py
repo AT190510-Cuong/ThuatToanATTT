@@ -51,10 +51,18 @@ def miller_rabin(n, t):  # dùng miller để xét nguyên tố
 
 
 if __name__ == '__main__':
-    n = int(input('Nhập n = '))
-    t = int(input('Nhập t = '))
+    # n = int(input('Nhập n = '))
+    # t = int(input('Nhập t = '))
+    while True:
+        n = int(input('Nhập n = '))
+        t = int(input('Nhập t = '))
+        if 2 < n and t > 0:
+            break
+        else:
+            print('Nhập lại n > 2 và t > 0')
+
     if miller_rabin(n, t):
-        print('NT')
+        print('Nguyên tố')
         print(f'Xác suât KL : {1 - math.pow(1 / 4, t)}')
     else:
         print('HS')

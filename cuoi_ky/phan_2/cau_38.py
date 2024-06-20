@@ -16,9 +16,16 @@ def nghich_dao(a,p):
         u=r
         x2=x1
         x1=x
+    # return x1 % p
     return x1 
 
 
-p = int(input('Nhập số SNT P = '))
+# p = int(input('Nhập số SNT P = '))
+while True:
+    p = int(input('Nhập số SNT P = '))
+    if p > 1:
+        break
+    else:
+        print("Nhập lại số P")
 a = int(input(f'Nhập a = [1 {p - 1} ] = '))
 print(nghich_dao(a, p))

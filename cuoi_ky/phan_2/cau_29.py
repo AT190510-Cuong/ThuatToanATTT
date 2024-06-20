@@ -62,5 +62,11 @@ def count_number_carmichael(number_n):
     print(count)
 
 
-number_n = int(input("nhập số n ="))
+# number_n = int(input("nhập số n ="))
+while True:
+    number_n = int(input("nhập số N ="))
+    if number_n >= 0 and number_n <= 10000:
+        break
+    else:
+        print("Nhập lại số N")
 count_number_carmichael(number_n)

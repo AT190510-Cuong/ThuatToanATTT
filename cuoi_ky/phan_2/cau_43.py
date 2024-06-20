@@ -57,7 +57,14 @@ def random_number():
 
 if __name__ == '__main__':
     p = random_number()
-    n = int(input('Nhập n = '))
+    # n = int(input('Nhập n = '))
+    while True:
+        n = int(input('Nhập n = '))
+        if n > 0 and n < 1000:
+            break
+        else:
+            print("Nhập lại số N")
+
     print("p = ", p)
     for a in range(2, n):
         b = square_integer(a, p, n)

@@ -14,9 +14,9 @@ def failure_function(P):
         d=0
         t=1
         i=j-1
-        x=j
+        # x=j
         while(t<j):
-            if P[0:t]==P[i:x]:
+            if P[0:t]==P[i:j]:
                 d+=1
             t+=1
             i-=1
@@ -46,5 +46,5 @@ def kmp(P,T):
             t=1
     return('P NOT IN T')
 
-print(kmp(P,T))    
-# print(failure_function(P))    
+# print(kmp(P,T))    
+print(failure_function(P))    
